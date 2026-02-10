@@ -14,9 +14,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
                         <Link className="navbar-brand d-flex main-logo align-items-center ms-lg-0 ms-md-5 ms-3" href="/">
                             <span className="fs-4 ms-2">Devan.Yudistira</span>
                         </Link>
-                        <div className="d-none d-lg-flex">
+                        <div className="d-none d-lg-flex position-absolute start-50 translate-middle-x">
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                <ul className="navbar-nav mb-2 mb-lg-0">
                                     <li className="nav-item">
                                         <Link href="#work" className="nav-link">
                                             Portfolio

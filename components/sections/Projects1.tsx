@@ -1,35 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import Isotope from "isotope-layout"
-import { useEffect, useRef, useState } from "react"
-
 export default function Projects1() {
-
-    const isotope = useRef<Isotope | null>(null)
-	const [filterKey, setFilterKey] = useState<string>("*")
-
-	useEffect(() => {
-		const timeout = setTimeout(() => {
-			isotope.current = new Isotope(".masonry-active", {
-				itemSelector: ".filter-item",
-				percentPosition: true,
-				masonry: {
-					columnWidth: ".filter-item",
-				},
-			})
-		}, 1000)
-
-		// Cleanup on unmount
-		return () => clearTimeout(timeout)
-	}, [])
-
-	useEffect(() => {
-		if (isotope.current) {
-			isotope.current.arrange({ filter: filterKey === "*" ? "*" : `.${filterKey}` })
-		}
-	}, [filterKey])
-
     return (
         <>
             <div id="projects" className="section-projects-1 position-relative pt-120 pb-6 bg-900">
@@ -41,14 +13,13 @@ export default function Projects1() {
                     </div>
                 </div>
             </div>
-            <div className="bg-900 fillter-project">
+            <div className="bg-900">
                 <div className="container">
-                    <div className="row masonry-active justify-content-between">
-                        <div className="grid-sizer" />
-                        <div className="filter-item col-lg-6 col-12 brand ui app">
+                    <div className="row g-4">
+                        <div className="col-lg-6">
                             <div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
                                 <Link href="/work-single">
-                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-1.png" alt="infinia" />
+                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-1.png" alt="Photo App UI/UX" style={{ aspectRatio: "7/5", objectFit: "cover" }} />
                                 </Link>
                                 <div className="d-flex align-items-center mt-4">
                                     <Link href="/work-single" className="project-card-content">
@@ -61,10 +32,10 @@ export default function Projects1() {
                                 </div>
                             </div>
                         </div>
-                        <div className="filter-item col-lg-6 col-12 webdesign brand dataanalysis brand">
+                        <div className="col-lg-6">
                             <div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
                                 <Link href="/work-single">
-                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-2.png" alt="infinia" />
+                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-2.png" alt="Mobile App Design" style={{ aspectRatio: "7/5", objectFit: "cover" }} />
                                 </Link>
                                 <div className="d-flex align-items-center mt-4">
                                     <Link href="/work-single" className="project-card-content">
@@ -77,10 +48,10 @@ export default function Projects1() {
                                 </div>
                             </div>
                         </div>
-                        <div className="filter-item col-lg-6 col-12 ui app">
+                        <div className="col-lg-6">
                             <div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
                                 <Link href="/work-single">
-                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-3.png" alt="infinia" />
+                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-3.png" alt="Interaction Design" style={{ aspectRatio: "7/5", objectFit: "cover" }} />
                                 </Link>
                                 <div className="d-flex align-items-center mt-4">
                                     <Link href="/work-single" className="project-card-content">
@@ -93,10 +64,10 @@ export default function Projects1() {
                                 </div>
                             </div>
                         </div>
-                        <div className="filter-item col-lg-6 col-12 app app dataanalysis brand">
+                        <div className="col-lg-6">
                             <div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
                                 <Link href="/work-single">
-                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-4.png" alt="infinia" />
+                                    <img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/projects-1/img-4.png" alt="Design Consultation" style={{ aspectRatio: "7/5", objectFit: "cover" }} />
                                 </Link>
                                 <div className="d-flex align-items-center mt-4">
                                     <Link href="/work-single" className="project-card-content">
