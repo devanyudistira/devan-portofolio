@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 
 export default function Home1() {
@@ -6,6 +5,9 @@ export default function Home1() {
 		<>
 			<section className="section-hero-1 position-relative">
 				<div className="container position-relative z-3">
+				<div className="d-md-none position-relative mb-5">
+					<img className="filter-gray" src="/assets/imgs/hero/hero-1/man1.png" alt="man" />
+				</div>
 					<div className="row">
 						<div className="col-lg-6 col-md-12">
 							<h1 className="ds-2 mb-3">Hi Everyone, I am <br /><span className="text-primary-1">Devan Yudistira</span></h1>
@@ -13,7 +15,7 @@ export default function Home1() {
 						</div>
 					</div>
 				</div>
-				<div className="shape-1 position-absolute bottom-0 start-50 z-1 ms-10 d-none d-md-block">
+				<div className="shape-1 position-absolute bottom-0 start-50 z-1 ms-10 d-none d-md-block" style={{ marginTop: '80px' }}>
 					<img className="position-relative z-1 filter-gray" src="/assets/imgs/hero/hero-1/man.png" alt="man" />
 					<div className="position-absolute top-50 start-0 translate-middle z-0 mt-8 ms-10 ps-8">
 						<img className="ribbonRotate" src="/assets/imgs/hero/hero-1/decorate.png" alt="" />

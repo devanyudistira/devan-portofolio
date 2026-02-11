@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Projects1() {
     return (
         <>
-            <div id="projects" className="section-projects-1 position-relative pt-120 pb-6 bg-900">
+            <div id="work" className="section-projects-1 position-relative pt-120 pb-6 bg-900">
                 <div className="container">
                     <div className="row align-items-end">
                         <div className="col-lg-7 me-auto">
